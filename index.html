@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0ZN7HRRMQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-G0ZN7HRRMQ');
+    </script>
+    <!-- End Google Analytics -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Game - Build Your Skyscraper Online | ZypherLabs</title>
+    <meta name="description" content="Play Tower Game online - a fun building game where you stack blocks to create the tallest tower possible. Test your precision and timing skills!">
+    <link rel="canonical" href="https://zypherlabs.online" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #F5F5F7;
+            color: #1D1D1F;
+        }
+        .game-container {
+            aspect-ratio: 16/9;
+            max-width: 1200px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <header class="bg-white shadow-sm">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-[#007AFF]">ZypherLabs</a>
+                <div class="space-x-4">
+                    <a href="#game" class="text-[#1D1D1F] hover:text-[#007AFF]">Play Game</a>
+                    <a href="#about" class="text-[#1D1D1F] hover:text-[#007AFF]">About</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Tower Game</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Build the tallest tower by stacking blocks with perfect precision. How high can you go?
+            </p>
+        </section>
+
+        <section id="game" class="mb-12">
+            <div class="game-container mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                <iframe 
+                    src="https://iamkun.github.io/tower_game/"
+                    class="w-full h-full border-0"
+                    allow="fullscreen"
+                    title="Tower Game">
+                </iframe>
+            </div>
+        </section>
+
+        <section id="about" class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6">About Tower Game</h2>
+            <div class="space-y-4 text-gray-700">
+                <p>
+                    Tower Game is an addictive building game where you stack blocks to create the tallest tower possible. 
+                    Test your precision and timing skills as you aim for the perfect stack!
+                </p>
+                <h2 class="text-2xl font-bold mt-8 mb-4">Game Features</h2>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Simple yet challenging gameplay</li>
+                    <li>Precision-based block stacking</li>
+                    <li>Progressive difficulty</li>
+                    <li>Score tracking system</li>
+                    <li>Perfect stack bonuses</li>
+                </ul>
+                <h2 class="text-2xl font-bold mt-8 mb-4">How to Play</h2>
+                <p>
+                    Click or tap to drop the block. The goal is to stack blocks perfectly on top of each other. 
+                    Each successful stack earns you points, with perfect stacks earning bonus points. 
+                    The game gets progressively harder as your tower grows taller!
+                </p>
+                <h2 class="text-2xl font-bold mt-8 mb-4">Game Rules</h2>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Start with 3 lives (HP)</li>
+                    <li>Each block drop costs 1 HP</li>
+                    <li>Successfully stacked blocks earn 25 points</li>
+                    <li>Perfect stacks earn 50 points plus bonus points for consecutive perfects</li>
+                    <li>Game ends when HP is depleted</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center text-gray-600">
+            <p>&copy; 2024 ZypherLabs. All rights reserved.</p>
+            <p class="mt-2 text-sm">Game developed by <a href="https://github.com/iamkun/tower_game" class="text-[#007AFF] hover:underline">iamkun</a></p>
+        </div>
+    </footer>
+</body>
+</html> 
