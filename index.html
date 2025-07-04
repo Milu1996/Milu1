@@ -19,8 +19,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-color: #F5F5F7;
-            color: #1D1D1F;
+            background: linear-gradient(135deg, #181A20 0%, #23272F 100%);
+            color: #F3F4F6;
         }
         .game-container {
             aspect-ratio: 16/9;
@@ -28,14 +28,14 @@
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col">
-    <header class="bg-white shadow-sm">
+<body class="min-h-screen flex flex-col bg-[#181A20] text-gray-100">
+    <header class="bg-[#23272F] shadow-md">
         <nav class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-[#007AFF]">ZypherLabs</a>
+                <a href="/" class="text-2xl font-bold bg-gradient-to-r from-[#00C3FF] via-[#7C3AED] to-[#00C3FF] bg-clip-text text-transparent drop-shadow">游戏站</a>
                 <div class="space-x-4">
-                    <a href="#game" class="text-[#1D1D1F] hover:text-[#007AFF]">Play Game</a>
-                    <a href="#about" class="text-[#1D1D1F] hover:text-[#007AFF]">About</a>
+                    <a href="#game" class="text-gray-200 hover:text-[#00C3FF] transition-colors">开始游戏</a>
+                    <a href="#about" class="text-gray-200 hover:text-[#7C3AED] transition-colors">关于</a>
                 </div>
             </div>
         </nav>
@@ -43,14 +43,14 @@
 
     <main class="flex-grow container mx-auto px-4 py-8">
         <section class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Tower Game</h1>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#00C3FF] via-[#7C3AED] to-[#00C3FF] bg-clip-text text-transparent drop-shadow">Tower Game</h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
                 Build the tallest tower by stacking blocks with perfect precision. How high can you go?
             </p>
         </section>
 
         <section id="game" class="mb-12">
-            <div class="game-container mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="game-container mx-auto bg-[#23272F] rounded-lg shadow-2xl overflow-hidden border-2 border-[#00C3FF]/40">
                 <iframe 
                     src="https://iamkun.github.io/tower_game/"
                     class="w-full h-full border-0"
@@ -61,42 +61,39 @@
         </section>
 
         <section id="about" class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold mb-6">About Tower Game</h2>
-            <div class="space-y-4 text-gray-700">
+            <h2 class="text-3xl font-bold mb-6 text-[#00C3FF]">关于 Tower Game</h2>
+            <div class="space-y-4 text-gray-300">
                 <p>
-                    Tower Game is an addictive building game where you stack blocks to create the tallest tower possible. 
-                    Test your precision and timing skills as you aim for the perfect stack!
+                    Tower Game 是一款令人上瘾的堆叠游戏，你需要将方块精准地叠加，挑战最高的高楼。考验你的手速与精准度！
                 </p>
-                <h2 class="text-2xl font-bold mt-8 mb-4">Game Features</h2>
+                <h2 class="text-2xl font-bold mt-8 mb-4 text-[#7C3AED]">游戏特色</h2>
                 <ul class="list-disc pl-6 space-y-2">
-                    <li>Simple yet challenging gameplay</li>
-                    <li>Precision-based block stacking</li>
-                    <li>Progressive difficulty</li>
-                    <li>Score tracking system</li>
-                    <li>Perfect stack bonuses</li>
+                    <li>简单但极具挑战性的玩法</li>
+                    <li>精准的方块堆叠机制</li>
+                    <li>难度逐步提升</li>
+                    <li>分数记录系统</li>
+                    <li>完美堆叠奖励</li>
                 </ul>
-                <h2 class="text-2xl font-bold mt-8 mb-4">How to Play</h2>
+                <h2 class="text-2xl font-bold mt-8 mb-4 text-[#7C3AED]">玩法说明</h2>
                 <p>
-                    Click or tap to drop the block. The goal is to stack blocks perfectly on top of each other. 
-                    Each successful stack earns you points, with perfect stacks earning bonus points. 
-                    The game gets progressively harder as your tower grows taller!
+                    点击或轻触屏幕即可下落方块，目标是让方块尽量完美地叠加在一起。每次成功堆叠可获得分数，连续完美堆叠有额外奖励。随着高楼升高，游戏难度也会增加！
                 </p>
-                <h2 class="text-2xl font-bold mt-8 mb-4">Game Rules</h2>
+                <h2 class="text-2xl font-bold mt-8 mb-4 text-[#7C3AED]">游戏规则</h2>
                 <ul class="list-disc pl-6 space-y-2">
-                    <li>Start with 3 lives (HP)</li>
-                    <li>Each block drop costs 1 HP</li>
-                    <li>Successfully stacked blocks earn 25 points</li>
-                    <li>Perfect stacks earn 50 points plus bonus points for consecutive perfects</li>
-                    <li>Game ends when HP is depleted</li>
+                    <li>初始拥有 3 点生命值（HP）</li>
+                    <li>每次下落方块消耗 1 点 HP</li>
+                    <li>成功堆叠得 25 分</li>
+                    <li>完美堆叠得 50 分，连续完美有额外加分</li>
+                    <li>HP 归零游戏结束</li>
                 </ul>
             </div>
         </section>
     </main>
 
-    <footer class="bg-white py-6 mt-12">
-        <div class="container mx-auto px-4 text-center text-gray-600">
-            <p>&copy; 2024 ZypherLabs. All rights reserved.</p>
-            <p class="mt-2 text-sm">Game developed by <a href="https://github.com/iamkun/tower_game" class="text-[#007AFF] hover:underline">iamkun</a></p>
+    <footer class="bg-[#23272F] py-6 mt-12">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <p>&copy; 2024 游戏站. 保留所有权利。</p>
+            <p class="mt-2 text-sm">游戏来源 <a href="https://github.com/iamkun/tower_game" class="text-[#00C3FF] hover:underline">iamkun</a></p>
         </div>
     </footer>
 </body>
